@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #btnleft{
+		font-size: 30px;
+       }
+       #btnright{
+		font-size: 30px;
+       }
+       #btnup{
+		font-size: 30px;
+       }
+       #btndown{
+		font-size: 30px;
+       }
+       #myimg{
+        width: 100px;
+        position: absolute;
+       }
+
+       #khavanu{
+        position: absolute;
+       }
+
+    </style>
+</head>
+<body onkeyup="moveObject(event)">
+    </div>
+    <h1 id="score" style="float: right; margin-top: -10px;">Current Score:</h1>
+    </div>
+    <div class="buttons">
+        <button id="btnleft" onclick="startLeft ()">❤️</button>
+        <button id="btnright" onclick="startRight()">❤️</button>
+        <button id="btnup" onclick="startTop()">❤️</button>
+        <button id="btndown" onclick="startDown()">❤️</button>
+    </div>
+    
+    <div style="border: solid black 5px; height: 550px;">
+        <div>
+            <img src="./images/snack.png" id="myimg" width="100px" height="100px">
+        </div>
+        <div>
+            <img src="./images/food.png" id="khavanu" width="20px" height="20px">
+        </div>
+        <div>
+    
+    <script>
+        currentleft = 0;
+        var imgRef = document.getElementById('myimg');
+
+		function moveObject(e){
+			if(e.key == "ArrowUp"){
+				startTop();
+			}
+			else if(e.key == "ArrowDown"){
+				startDown();
+			}
+			else if(e.key == "ArrowLeft"){
+				startLeft();
+			}
+			else if(e.key == "ArrowRight"){
+				startRight();
+			}
+		}
+
+        function moveLeft(){
+            currentleft = currentleft-2;
+			// if(currentLeft>-100){
+			// 	currentLeft=screen.availWidth;
+			// }
+            imgRef.style.left = currentleft+"px"
+            checkForScore();
+        }
+        function moveRight(){
+            currentleft = currentleft+2;
+            imgRef.style.left = currentleft+"px"
+            checkForScore();
+            
+        }
+        let currenttop = 100;
+        function moveUp(){
+            currenttop = currenttop-2;
+			// if(currentTop>-100){
+			// 	currentTop=screen.availHeight;
+			// }
+            imgRef.style.top = currenttop+"px"
+			checkForScore();
+            
+        }
+        function moveDown(){
+            currenttop = currenttop+2;
+            imgRef.style.top = currenttop+"px"
+            checkForScore();
+            
+        }
+        
+
+        function startLeft(){
+			
+            clearAllInterval();
+            ileft = setInterval(moveLeft,10);
+        }
+        function startRight(){
+			
+			clearAllInterval();
+            ileft = setInterval(moveRight,10);
+        }
+        function startTop(){
+			
+            clearAllInterval();
+            itop = setInterval(moveUp,10);
+        }
+        function startDown(){
+			
+			clearAllInterval();
+            itop = setInterval(moveDown,10);
+        }
+        
+        var ileft=0;
+        var itop=0;
+
+        function clearAllInterval(){
+            clearInterval(ileft);
+            clearInterval(itop);
+        }
+
+        var khavanuleft = 0;
+        var khavanutop = 0;
+
+        function khavanuChangePosition(){
+            imgKhavanu = document.getElementById('khavanu');
+
+            khavanuleft = parseInt(Math.random()*(screen.availWidth-100));
+            khavanutop = parseInt(Math.random()*(screen.availHeight-100));
+
+            imgKhavanu.style.left = khavanuleft + "px";
+            imgKhavanu.style.top = khavanutop + "px";
+        }
+		var currentScore = 0;
+		khavanuChangePosition();
+		function checkForScore(){
+			if(currentleft+100>khavanuleft && currentleft<khavanuleft+20 && currenttop+100>khavanutop && currenttop<khavanutop+20){
+				currentScore++;
+				document.getElementById('score').innerHTML = currentScore;
+				khavanuChangePosition();
+			}
+		}
+    </script>
+</body>
+</html>
