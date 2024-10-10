@@ -1,0 +1,30 @@
+#answer{
+    color: white;
+    padding: 10px;
+    height: 60px;
+    width: 70px;
+    text-align: center;
+    font-size: 17px;
+    background-image: linear-gradient(to top left,rgb(140, 139, 139) 5%,rgb(0, 0, 0) 95%);
+    border-radius: 10px;
+    border: 0;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+#answer:hover{
+    border: 3px solid cyan;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.3);
+}
+#result{
+    color: white;
+    padding: 10px;
+    height: 70px;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bolder;
+    color: black;
+    border: 2px dashed black;
+    padding-right: 15px;
+}

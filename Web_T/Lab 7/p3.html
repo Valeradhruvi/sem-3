@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- default parameter in function-->
+    <script>
+        function demo(a=2,b=3){
+            console.log(a,b);
+        }
+        demo(); //we have assigned no value though it will display the value we have decalred as default in function (2,3)
+        demo(undefined,2); //if we want to assign only one value set other one as undefined (2,2)
+        demo(3,2); //(3,2)
+    </script>
+</body>
+</html>

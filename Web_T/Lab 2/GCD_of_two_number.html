@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCD</title>
+</head>
+<body>
+    <!-- to find gcd of given two number -->
+     <script>
+        number_1 = parseInt(prompt("Enter first number(first number should be greater then second number): "));
+        number_2 = parseInt(prompt("Enter second number number: "));
+
+        var fact=1; i=0;
+        while(i < number_1){
+        
+            if(number_1%i==0 && number_2%i==0){
+                document.write(i);
+                fact = fact*i;
+            }
+        i++;
+    }
+
+    document.write("<br/>GCD is "+fact)
+     </script>
+</body>
+</html>

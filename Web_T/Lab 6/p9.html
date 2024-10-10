@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <!-- Write a JavaScript that handles following mouse events. Add necessary elements. (B)
+        JavaScript gives the key code for the key pressed.
+        If the key pressed is “a”,”e”,”i”,”o”,”u”, the script should announce that vowel is pressed.
+        When the key is released background should change to blue. -->
+    <p id="msg"></p>
+    <button id="justbtn" onkeypress="keyevent(event)" onkeyup="onreleased(event)">click</button>
+    <script>
+        msged = document.getElementById('msg');
+        function keyevent(event){
+            
+            if(event.key=='a'||event.key=='e'||event.key=='i'||event.key=='o'||event.key=='u'){
+               msged.innerHTML = "vowel is pressed";
+            }
+        }
+
+        onreleased = (event)=>{
+            if(event.key=='a'||event.key=='e'||event.key=='i'||event.key=='o'||event.key=='u'){
+               body =  document.getElementById('body');
+               body.style.background = "blue";
+               msged.innerHTML = "";
+            }
+            else{
+                body =  document.getElementById('body');
+                body.style.background = "white";
+            }
+        }
+    </script>
+</body>
+</html>

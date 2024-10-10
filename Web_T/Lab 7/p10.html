@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- mouse click event -->
+    <button id="click-me" onmousedown="display(event)">Click me</button>
+    <h1 id="msgdisplay"></h1>
+    <script>
+        document.addEventListener("contextmenu",(e)=> e.preventDefault());
+        function display(event){
+            var msg = document.getElementById('msgdisplay');
+            btn = document.getElementById('click-me');
+            if(event.button == 0){
+                msg.innerHTML = "Left click";
+            }
+            else{
+                msg.innerHTML = "Right click";
+            }
+
+        }
+    </script>
+</body>
+</html>

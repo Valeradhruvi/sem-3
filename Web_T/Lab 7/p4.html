@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- spread operator -->
+     <script>
+        stu1 = {
+            name: 'dhruvi',
+            enrollment_number: 290,
+            clasS_Name: '3A-B2'
+        };
+
+        stu2 = {...stu1} /* (...) is sread operator which is used when we want to access some object multiple times */
+
+        stu2.name = 'valera';
+        console.log(stu1);
+        console.log(stu2);
+
+        let arr = [1,2,3];  
+        let arr2 = [3,2,1];
+
+        let new_arr = [...arr,...arr2]; //will get merged output of both array
+        console.log(new_arr);
+     </script>
+     
+</body>
+</html>

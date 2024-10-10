@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        number = parseInt(prompt("Enter two digit number: "));
+
+        
+            last_digit = parseInt(number%10);
+            lnum = last_digit;
+            fnum=parseInt((number-lnum)/10);
+        var multi=1;
+        for(let i=1;i<=lnum;i++){
+            multi = fnum*multi;
+        }
+        document.write("<br/>"+multi);
+    </script>
+</body>
+</html>

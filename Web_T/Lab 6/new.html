@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Graphical Calculator Using HTML and Javascript </title>
+	<style type="text/css">
+		#output{
+			height : 50px;
+			text-align: right;
+			align-items: center;
+
+		}
+		input{
+			width: 100%;
+			background: pink;
+		}
+		input:hover{
+			background: gray;
+		}
+		.design{
+			border: 1px solid black;
+			margin-top: 15%;
+			width: 25%;
+			align-content: center;
+		}
+	</style>
+</head>
+<body>
+   <table border="1" align="center" class="design">
+	<tr><td colspan="4" id="output"></td></tr>
+	<tr>
+		<td><input type="button" value="9" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="8" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="7" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="/" onclick="AddNo(this.value)"/></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="6" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="5" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="4" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="*" onclick="AddNo(this.value)"/></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="3" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="2" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="1" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="+" onclick="AddNo(this.value)"/></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="AC" onclick="DeleteAll()"/></td>
+		<td><input type="button" value="0" onclick="AddNo(this.value)"/></td>
+		<td><input type="button" value="=" onclick="Eqaul()"/></td>
+		<td><input type="button" value="-" onclick="AddNo(this.value)"/></td>
+	</tr>
+   </table>
+
+   <script>
+	function AddNo(num){
+		const output = document.getElementById('output');
+		output.innerHTML += num;
+	}
+	function DeleteAll(){
+		const output = document.getElementById('output');
+		output.innerHTML = '';
+	}
+	function Eqaul(){
+		const output = document.getElementById('output');
+		const expression = output.innerHTML;
+
+		try{
+			const finalOutput = new Function(return (${expression}))();
+			output.innerHTML = finalOutput;
+		} catch(e){
+			output.innerHTML = 'Error';
+		}
+	}
+   </script>
+</body>
+</html>

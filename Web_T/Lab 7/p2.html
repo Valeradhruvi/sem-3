@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- diff between let and var -->
+     <script>
+        //let has blocked scope
+        //var has functional scope
+
+        a=5; //global scope
+        function display(){
+            if(true){
+                let b=5;
+                const c=7;
+                var d=5;
+                //console.log(b,c) ==> no error due to blocked scope
+            }
+            console.log(a);
+            console.log(b,c); // will show error due to blocked scope
+            console.log(d); //no error due functoinal scope
+        }
+        display();
+        console.log(a);
+        console.log(d);// will show error 
+     </script>
+</body>
+</html>

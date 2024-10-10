@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        character = prompt("Enter a word: ");
+       
+            firstO = character.indexOf('a');
+            document.write("First index: "+firstO);
+            var lastO = character.lastIndexOf('a');
+            document.write("<br/>Last index: "+lastO);
+
+            if(firstO == -1 || lastO == -1){
+                document.write("word contain atleast one 'a' letter");
+            }
+
+            updated_string = character.substring(firstO+1,lastO);
+            document.write("<br/>"+updated_string);
+
+
+    </script>
+</body>
+</html>

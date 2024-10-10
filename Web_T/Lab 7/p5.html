@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for of loop and for in loop -->
+    <script>
+        arr = [1,2,3];
+        function loops(){
+            for (const i of arr) {
+                console.log(i);//value of arr will get displayed
+                
+            }
+            console.log("for in loop")
+            for (const i in arr) {
+                console.log(i); //index of array will get displayed
+               // console.log(arr[i]) => value of array will get displayed
+            }
+        }
+
+        loops();
+    </script>
+</body>
+</html>

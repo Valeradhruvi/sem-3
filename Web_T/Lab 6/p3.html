@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Keyboard event: </h1>
+    <div id="displaykey"></div>
+    <script>
+        let body = document.querySelector('body');
+        let divk = document.getElementById('displaykey');
+
+        body.addEventListener('keydown', (e) =>  {console.log(e.key);    
+            divk.innerHTML = `keyboard event : ${e.key}`;
+        });
+
+    </script>
+</body>
+</html>

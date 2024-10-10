@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- to find maximum number -->
+    <script>
+        a=parseInt(prompt("Enter size of array: "));
+
+        arr = [];
+        for(let i=0;i<a;i++){
+            let b=prompt("Enter element: "+i);
+            arr.push(b);
+        }
+        document.write("Your array is:  "+arr);
+        lnum = 0;
+        for(let i=0;i<a;i++){
+            if(arr[i]>arr[lnum]){
+            lnum = i;
+            }
+        }
+
+        document.write("</br>Maximum number is:  "+arr[lnum]);
+    </script>
+</body>
+</html>

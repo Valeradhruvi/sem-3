@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        product=[
+        {
+            name:'product 1',
+            qty:1,
+            price:1000,
+            mfg: 31-12-2024
+        },
+        {
+            name:'product 2',
+            qty:12,
+            price:2000,
+            mfg: 31-12-2024
+        },
+        {
+            name:'product 3',
+            qty:50,
+            price:3000,
+            mfg: 31-12-2024
+        },
+        {
+            name:'pname4',
+            qty:100,
+            price:5000,
+            mfg: 31-12-2024
+        }
+    ]
+    for(i=0;i<product.length;i++){
+        document.write("<table border=1px margin-left='20px' style='background-image: linear-gradient(crimson,black); color:white;'>");
+            document.write("<th>product"+[i]+"</th>");
+            document.write("<tr>");
+                document.write("<td>Name:"+product[i].name+"</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<td>qty:"+product[i].qty+"</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<td>price:"+product[i].price+"</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<td> manufacturing date:"+product[i].mfg+"</td>");
+                document.write("</tr>")
+      
+        document.write("</table>");
+        document.write("<br/>");
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- to print prime numbers between given range -->
+    <script>
+        number_1 = parseInt(prompt("Enter lower number of range"));
+        number_2 = parseInt(prompt("Enter highest number of range"));
+
+        if(number_1==0||number_1==1){
+            alert("invalid input number should be greater then 2 because 1 and 0 cannot be counted in prime number ");
+        }
+        else{
+        for(let i=number_1;i<=number_2;i++){
+            let count = 0;
+
+            for(let j=2;j<i;j++){
+                if(i%j==0){
+                    count = 1;
+                    break;
+                }
+            }
+
+            if(i>1&&count==0){
+                document.write(i+" ");
+            }
+        }
+    }
+    </script>
+</body>
+</html>

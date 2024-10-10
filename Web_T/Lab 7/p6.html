@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array object destrction -->
+    <script>
+       /*  let arr1 = [1,2,3]
+        arrr2 = [4,5,6]
+        arr3 = [...arr1,...arrr2]
+        const [a,...rest] = arr3
+
+        let obj2 = {...obj1,c:3};
+        console.log(obj2); */
+
+        // destrction
+        let obj3 = {
+            a:4,
+            b:5,
+            c:6
+        }
+
+       const {c,...rest} = obj3;
+       console.log(rest);
+       console.log(c)
+    </script>
+</body>
+</html>

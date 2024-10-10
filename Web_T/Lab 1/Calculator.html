@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculator</title>
+</head>
+<body>
+    <script>
+        a=prompt("Enter First number: ");
+        b=prompt("Emter second number: ");
+
+        c=prompt("Enter the arithematic operater: ");
+        switch(c){
+            case '+':
+                alert(parseInt(a)+parseInt(b));
+                break;
+            case '-':
+                alert(parseInt(a)-parseInt(b));
+                break;
+            case '*': 
+                alert(parseInt(a)*parseInt(b));
+                break;
+            case '/': 
+                alert(parseInt(a)/parseInt(b));
+                break;
+        }
+    </script>
+</body>
+</html>

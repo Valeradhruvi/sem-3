@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+<body>
+
+    <h1 style="text-align: center; font-size: 45px;">Calculator</h1>
+    <table align="center" style="margin-top: 50px; border: 5px solid black; border-radius: 10px; background-image: linear-gradient(to bottom right ,rgb(165, 165, 165),rgb(0, 0, 0)95%);">
+        <tr>
+            <td colspan="4" id="result">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="answer" value="7" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="8" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="9" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="=" onclick="equalbutton()">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <input type="button" id="answer" value="4" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="5" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="6" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="+" onclick="addon(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="answer" value="1" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="2" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="3" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="*" onclick="addon(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="answer" value="C" onclick="clearans()">
+            </td>
+            <td>
+                <input type="button" id="answer" value="0" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="-" onclick="addon(this.value)">
+            </td>
+            <td>
+                <input type="button" id="answer" value="/" onclick="addon(this.value)">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function addon(num){
+        const ans = document.getElementById('result');
+            ans.innerHTML += num;
+        }
+
+        function clearans(){
+         const ans = document.getElementById('result');
+            ans.innerHTML = " ";
+        }
+        // let temp = result.innerHTML;
+
+        function equalbutton(){
+            const result = document.getElementById('result');
+            const output = result.innerHTML;
+
+            try{
+                const final_output = new Function(`return (${output})`)();
+                result.innerHTML = final_output;
+            }
+            catch(e){
+                result.innerHTML = 'error';
+            }
+        }
+       
+        
+    </script>
+</body>
+</html>

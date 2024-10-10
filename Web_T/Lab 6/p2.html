@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Mouse Event: </button>
+    <div id="displaymsg"></div>
+    <script>
+        function display(event){
+            document.getElementById('displaymsg').innerText=event ;
+        }
+        document.addEventListener('click', () => display('click'));
+        document.addEventListener('mousein', () => display('Mouse in'));
+        document.addEventListener('dblclick', () => display('Double click'));
+        document.addEventListener('mouseout', () => display('Mouse out'));
+        document.addEventListener('mousemove', () => display('Mouse Move'));
+    </script>
+</body>
+</html>

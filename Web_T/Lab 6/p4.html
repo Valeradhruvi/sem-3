@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+
+<body> 
+		<h1 style="color: green;"> Form Event </h1> 
+		
+		<button onclick="OnClickFunction()"> Click me </button> 
+		
+		<p id="demo"></p> 
+		<br />
+
+		<p onmouseover="MouseHover()"> Hover Mouse Here </p> 
+
+	<script> 
+		function OnClickFunction() { 
+			document.getElementById("demo") 
+				.innerHTML = "Clicked Me.."; 
+		} 
+
+		function MouseHover() { 
+			alert("Mouse move over"); 
+		} 
+	</script> 
+</body> 
+
+</html> 

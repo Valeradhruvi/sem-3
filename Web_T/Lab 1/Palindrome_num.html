@@ -1,0 +1,27 @@
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+</head>
+<body>
+    <!-- to check palindorme number -->
+     <script>
+        a=parseInt(prompt("Enter number"));
+        var reverse=0;
+        var flag=a;
+        while(a!=0){
+            last_digit = a%10;
+            reverse = (reverse*10)+last_digit;
+            a=parseInt(a/10);
+        }
+        if(reverse == flag){
+            alert("it is palindrome number");
+        }
+        else{
+            alert("it is not a palindorme number");
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong number</title>
+</head>
+<body>
+    <script>
+       // program to check an Armstrong number of three digits
+
+        let sum = 0;
+         number = prompt('Enter a three-digit positive integer: ');
+
+        let temp = number;
+        while (temp > 0) {
+             // finding the one's digit
+            let remainder = temp % 10;
+                sum = sum + remainder * remainder * remainder;
+
+        // removing last digit from the number
+        temp = parseInt(temp / 10); 
+    }
+    if (sum == number) {
+        alert("It is armstrong number.")
+    }
+    else {
+     alert("It is not an Armstrong number.");
+    }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci series</title>
+</head>
+<body>
+    <!-- fibonacci series -->
+    <script>
+        a=parseInt(prompt("Enter number"));
+
+        f=0;
+        s=1;
+        ans=f+s;
+        alert(f);
+        for(i=2;i<=a;i++){
+            alert(ans);
+            f=s;
+            s=ans;
+            ans=f+s;
+        }
+    </script>
+</body>
+</html>

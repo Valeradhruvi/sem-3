@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        number = parseInt(prompt("Enter number(0-999): "));
+
+        if(isNaN(number)){
+            document.write("Not a Number");
+        }
+        if(number<0 || number>999){
+            document.write("OUT of RANGE");
+        }
+
+        var units = ['ZERO','ONE','TWO','THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE'];
+        var teens = ['TEN','ELEVEN','TWELVE','THIRTEEN','FOURTEEN','FIFTEEN','SIXTEEN','SEVENTEEN','EIGHTEEN','NINETEEN'];
+        var tens = ['TWENTY','THIRTY','FOURTY','FIFTY','SIXTY','SEVENTY','EIGHTY','NINETY'];
+
+        let result = ' ';
+        
+        if(number>=100){
+            result += units[Math.floor(number / 100)]+" HUNDRED ";
+            number = number%100;
+        }
+        if(number>=20){
+            result += tens[Math.floor(number/10)-2]+" ";
+            number = number%10;
+        }
+        else if(number>=10){
+            result += teens[number-10]+" ";
+        }
+
+       
+        document.write(result);
+    </script>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words</title>
+</head>
+<body>
+    <h1>Number to Words</h1>
+    <div id="result"></div>
+    <script>
+        var num = prompt("Enter a number between 0 and 999:");
+        var resultBox = document.getElementById('result');
+        
+        if (isNaN(num)) {
+            resultBox.innerHTML = "not a number";
+        } else {
+            num = Number(num);
+            if (num < 0 || num > 999) {
+                resultBox.innerHTML = "out of range";
+            } else {
+                var ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+                var teens = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+                var tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+                var hundreds = ["", "one hundred", "two hundred", "three hundred", "four hundred", "five hundred", "six hundred", "seven hundred", "eight hundred", "nine hundred"];
+
+                var numInWords = "";
+                if (num == 0) {
+                    numInWords = "zero";
+                } else {
+                    var hundred = Math.floor(num / 100);
+                    var ten = Math.floor((num % 100) / 10);
+                    var one = num % 10;
+
+                    if (hundred > 0) {
+                        numInWords += hundreds[hundred] + " ";
+                    }
+
+                    if (ten > 1) {
+                        numInWords += tens[ten] + " ";
+                        numInWords += ones[one];
+                    } else if (ten === 1 && one > 0) {
+                        numInWords += teens[one - 1];
+                    } else {
+                        numInWords += ones[one];
+                    }
+                }
+                resultBox.innerHTML = numInWords.trim();
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+</body>
+</html>
